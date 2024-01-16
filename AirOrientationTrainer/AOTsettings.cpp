@@ -32,7 +32,7 @@ void AirOrientationTrainer::RenderSettings() {
     CVarWrapper trainModeCVar = cvarManager->getCvar("AOT_training_mode");
     if (!trainModeCVar) { return; }
     static int item_current = 0;
-    if (ImGui::Combo("Training Mode", &item_current, "Default Pack\0Endless Random")) {
+    if (ImGui::Combo("Training Mode", &item_current, "Default Pack\0Endless Random\0Endless Wheels Down\0Endless Wheels Up")) {
         trainModeCVar.setValue(item_current);
         if (enabled) {
             gameWrapper->Execute([this](GameWrapper* gw) {

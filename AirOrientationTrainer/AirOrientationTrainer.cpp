@@ -94,16 +94,23 @@ void AirOrientationTrainer::reset() {
 		if (trainingMode == 0) {
 			GetTraining();
 		}
-		else if (trainingMode == 1) {
+		else if ( 1 <= trainingMode <= 3 ) {
 			std::random_device rd;
 			std::uniform_int_distribution<int> dist(-32767, 32767);
 			std::uniform_int_distribution<int> dist2(-16383, 16383);
 			initCarPitch = dist2(rd);
 			initCarYaw = dist(rd);
 			initCarRoll = dist(rd);
-			targetPitch = dist2(rd);
-			targetYaw = -abs(dist(rd)); // only yaw pointing towards blue goal, less confusing and still allows all possible rotations
-			targetRoll = dist(rd);
+			if (trainingMode == 1) {
+				targetPitch = dist2(rd);
+				targetYaw = -abs(dist(rd)); // only yaw target pointing towards blue goal, less confusing and still allows all possible rotations
+				targetRoll = dist(rd);
+			}
+			else {
+				targetPitch = 0;
+				targetYaw = -16384;
+				( trainingMode == 2) ? targetRoll = 0: targetRoll = 32767;
+			}
 			firstNewTrain = false;
 		}
 	}

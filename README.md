@@ -2,7 +2,7 @@
 BakkesMod Aerial Orientation Trainer
 
 Controlling rocket cars in 3D is hard.  
-Use this plugin to train your muscle memory so you can rotate your car quickly from any position to any other.  
+Use this plugin to train your muscle memory so you can rotate your car quickly to any orientation.  
 Handy for basic aerial car control right up to flip-resets and more advanced aerial maneuvers.
 
 The goal is to align the front of your car with the yellow arrow and the bottom of your car with the orange arrow as fast as you can.
@@ -15,4 +15,4 @@ Default settings screenshot.
 
 Once you get the hang of the default settings, try setting the round time limit to 2s.  
 As you get better, you can try gradually changing the accuracy difficulty.  
-Believe it or not, it is possible to get from any random starting orientation to any random target orientation in less than 1s!
+Believe it or not, it is possible to get from any random starting orientation to any other in less than 1s!
